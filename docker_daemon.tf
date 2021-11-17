@@ -47,12 +47,12 @@ resource "null_resource" "configure_docker" {
 
   provisioner "file" {
     content = data.template_file.awx_build_sh.rendered
-    destination = "/opt/awx_build.sh"
+    destination = "/home/opc/awx_build.sh"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "sudo mkdir /opt/awx",
+      "sudo cp /home/opc/awx_build.sh /opt/awx_build.sh",
       "sudo chmod 0777 /opt/awx_build.sh",
     ]
   }

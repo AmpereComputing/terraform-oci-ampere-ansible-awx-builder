@@ -56,7 +56,7 @@ variable "fingerprint" {}
 variable "private_key_path" {}
 
 module "oci-ampere-ansible-awx-builder" {
-  source                   = "github.com/amperecomputing/terraform-oci-ampere-awx-builder"
+  source                   = "github.com/amperecomputing/terraform-oci-ampere-ansible-awx-builder"
   tenancy_ocid             = var.tenancy_ocid
   user_ocid                = var.user_ocid
   fingerprint              = var.fingerprint
@@ -64,10 +64,13 @@ module "oci-ampere-ansible-awx-builder" {
 # Optional
 # oci_vcn_cidr_block       = "10.2.0.0/16"
 # oci_vcn_cidr_subnet      = "10.2.1.0/24"
-# instance_prefix          = "openstack-kolla-image-builder"
+# instance_prefix          = "ansible-awx-builder"
 # oci_vm_count             = "1"
 # ampere_a1_vm_memory      = "24"
 # ampere_a1_cpu_core_count = "4"
+# awx_build_prefix         = "ampere"
+# awx_version              = "19.3.0"
+# awx_operator_version     = "0.14.0"
 }
 
 output "oci_ampere_a1_private_ips" {
