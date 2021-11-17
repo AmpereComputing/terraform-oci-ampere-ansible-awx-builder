@@ -106,3 +106,4 @@ terraform init && terraform plan && terraform apply -auto-approve
 * [Oracle Cloud Always Free](https://www.oracle.com/cloud/free/#always-free)
 * [OCI Terraform Level 200](https://www.oracle.com/a/ocom/docs/terraform-200.pdf)
 * [Building/installing AWX for ARM64](https://gist.github.com/agaffney/679ece1117f6e49cffe086846ec9bb2c)
+* [AWX: Docker Compose for Development](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
