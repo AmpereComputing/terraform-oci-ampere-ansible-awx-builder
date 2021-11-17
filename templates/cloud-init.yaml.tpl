@@ -7,8 +7,13 @@ packages:
   - screen
   - rsync
   - git
-  - curl
-  - docker-engine
+# - curl
+# no docker engine by default would need to add a custom repo
+# - docker-engine
+  - podman-docker
+  - oci-systemd-hook 
+  - oci-unmount
+  - skopeo
   - python3
   - python3-pip
   - gcc
