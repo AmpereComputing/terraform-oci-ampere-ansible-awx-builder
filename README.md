@@ -102,3 +102,4 @@ terraform init && terraform plan && terraform apply -auto-approve
 * [scross01/autonomous_linux_7.7.tf](https://gist.github.com/scross01/bcd21c12b15787f3ae9d51d0d9b2df06)
 * [Oracle Cloud Always Free](https://www.oracle.com/cloud/free/#always-free)
 * [OCI Terraform Level 200](https://www.oracle.com/a/ocom/docs/terraform-200.pdf)
+* [Building/installing AWX for ARM64](https://gist.github.com/agaffney/679ece1117f6e49cffe086846ec9bb2c)
