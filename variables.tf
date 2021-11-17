@@ -71,3 +71,8 @@ variable "awx_operator_version" {
   description = "Version of AWX-Operator to build/install"
   type        = string
 }
+variable "docker_compose_version" {
+  default     = "2.1.1"
+  description = "Version of AWX-Operator to build/install"
+  type        = string
+}

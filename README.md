@@ -71,6 +71,7 @@ module "oci-ampere-ansible-awx-builder" {
 # awx_build_prefix         = "ampere"
 # awx_version              = "19.3.0"
 # awx_operator_version     = "0.14.0"
+# docker_compose_version   = "2.1.1"
 }
 
 output "oci_ampere_a1_private_ips" {
