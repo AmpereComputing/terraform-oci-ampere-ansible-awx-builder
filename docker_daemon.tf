@@ -51,7 +51,7 @@ resource "null_resource" "configure_docker" {
   }
 
   provisioner "remote-exec" {
-
+    inline = [
       "sudo mkdir /opt/awx",
       "sudo chmod 0777 /opt/awx_build.sh",
     ]
