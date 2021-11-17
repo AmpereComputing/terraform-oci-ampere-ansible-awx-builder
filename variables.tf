@@ -55,3 +55,19 @@ variable "ampere_a1_cpu_core_count" {
     description = "Default core count for Ampere A1 instances in OCI Free Tier"
     type    = string
 }
+# AWX Variables
+variable "awx_build_prefix" {
+  default     = "ampere"
+  description = "Build prefix for AWX container images"
+  type        = string
+}
+variable "awx_version" {
+  default     = "19.3.0"
+  description = "Version of AWX to build/install"
+  type        = string
+}
+variable "awx_operator_version" {
+  default     = "0.14.0"
+  description = "Version of AWX-Operator to build/install"
+  type        = string
+}

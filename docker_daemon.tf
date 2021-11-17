@@ -14,6 +14,20 @@ resource "local_file" "docker_daemon_json" {
   filename = "${path.module}/docker_registry-daemon.json"
 }
 
+data "template_file" "awx_build_sh" {
+  template = file("${path.module}/templates/awx_build.sh.tpl")
+  vars = {
+    public_ip = oci_core_instance.ampere_a1.0.public_ip
+    awx_build_prefix = var.awx_build_prefix
+    awx_version = var.awx_version
+    awx_operator_version = var.awx_operator_version
+  }
+}
+
+output "awx_build_sh" {
+  value = data.template_file.awx_build_sh.rendered
+}
+
 resource "null_resource" "configure_docker" {
   triggers = {
     instance_public_ip = oci_core_instance.ampere_a1.0.public_ip
@@ -31,11 +45,15 @@ resource "null_resource" "configure_docker" {
     destination = "/home/opc/daemon.json"
   }
 
+  provisioner "file" {
+    content = data.template_file.awx_build_sh.rendered
+    destination = "/opt/awx_build.sh"
+  }
+
   provisioner "remote-exec" {
-    inline = [
-      "sudo mkdir /opt/kolla-build",
-      "sudo mv /home/ubuntu/kolla_build.sh /opt/kolla-build/",
-      "sudo chmod 0777 /opt/kolla-build/kolla_build.sh",
+
+      "sudo mkdir /opt/awx",
+      "sudo chmod 0777 /opt/awx_build.sh",
     ]
   }
 }
