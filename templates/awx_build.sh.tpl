@@ -9,5 +9,5 @@ LOGFILE=/opt/build_awx-operator_${awx_operator_version}.log
 exec >> $LOGFILE 2>&1
 git clone -b ${awx_operator_version} https://github.com/ansible/awx-operator.git /opt/awx-operator
 cd /opt/awx-operator
-IMAGE_TAG_BASE="${public_ip}:4000/${awx_build_prefix}/awx-operator"
+export IMAGE_TAG_BASE="${public_ip}:4000/${awx_build_prefix}/awx-operator"
 make all docker-push
