@@ -108,3 +108,5 @@ terraform init && terraform plan && terraform apply -auto-approve
 * [OCI Terraform Level 200](https://www.oracle.com/a/ocom/docs/terraform-200.pdf)
 * [Building/installing AWX for ARM64](https://gist.github.com/agaffney/679ece1117f6e49cffe086846ec9bb2c)
 * [AWX: Docker Compose for Development](https://github.com/ansible/awx/blob/devel/tools/docker-compose/README.md)
+* [Test Ansible AWX 19.3.0 on Docker](https://dev.to/rdamrong/test-ansible-awx-19-3-0-on-docker-1bnn)
+* [how to install the awx ansible web gui on centos 8](https://www.techrepublic.com/article/how-to-install-the-awx-ansible-web-gui-on-centos-8/)
